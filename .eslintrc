@@ -14,10 +14,9 @@
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
   },
-  "plugins": ["import", "jsx-a11y", "react", "react-hooks", "prettier"],
-  "extends": ["airbnb", "prettier"],
+  "plugins": ["import", "jsx-a11y", "react", "react-hooks"],
+  "extends": ["airbnb"],
   "rules": {
-    "prettier/prettier": "error",
     "camelcase": "off",
     "import/prefer-default-export": "off",
     "react/prop-types": "off",
@@ -55,7 +54,6 @@
       "plugins": ["@typescript-eslint/eslint-plugin"],
       "extends": [
         "plugin:@typescript-eslint/recommended",
-        "prettier"
       ],
       "rules": {
         "@typescript-eslint/explicit-function-return-type": "off",

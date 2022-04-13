@@ -1,3 +1,4 @@
+/*eslint-disable object-curly-newline,  @typescript-eslint/no-empty-function, jsx-a11y/alt-text, spaced-comment, max-len*/
 import React, { CSSProperties, useEffect, useRef, useState } from 'react';
 
 type Props = React.DetailedHTMLProps<

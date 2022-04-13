@@ -1,3 +1,4 @@
+/* eslint-disable operator-linebreak, indent */
 import React, { CSSProperties } from 'react';
 
 export type ButtonProps = {
