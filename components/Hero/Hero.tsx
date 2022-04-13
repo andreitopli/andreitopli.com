@@ -1,11 +1,10 @@
 import React from 'react';
 import { Button } from '../Button/Button';
 import { ImagePlaceHolder } from '../ImagePlaceholder/ImagePlaceholder';
-import { Parallax } from 'react-scroll-parallax';
 
-type Props = {};
+type Props = Record<string, unknown>;
 
-export const Hero: React.FC<Props> = (props) => {
+export const Hero: React.FC<Props> = ({}) => {
 	return (
 		<main className="flex flex-col w-full h-screen overflow-hidden bg-background-default relative">
 			<div className="flex flex-row w-full">
@@ -21,13 +20,21 @@ export const Hero: React.FC<Props> = (props) => {
 						</p>
 					</div>
 					<div className="sm:block hidden space-y-2 px-16">
-						<a href="mailto:andrei.topli@gmail.com" target="_blank">
+						<a
+							href="mailto:andrei.topli@gmail.com"
+							target="_blank"
+							rel="noreferrer"
+						>
 							<Button label="Say Hi" type="primary" onClick={() => {}} />
 						</a>
 					</div>
 					<div className="flex justify-start sm:hidden w-full pl-6">
 						<div className="bg-primary-green rounded-full text-center align-baseline px-8 py-1 mt-10">
-							<a href="mailto:andrei.topli@gmail.com" target="_blank">
+							<a
+								href="mailto:andrei.topli@gmail.com"
+								target="_blank"
+								rel="noreferrer"
+							>
 								<span className="text-text-dark font-semibold font-second text-lg">
 									Say Hi
 								</span>
@@ -54,16 +61,14 @@ export const Hero: React.FC<Props> = (props) => {
 									height="100%"
 								/>
 							</div>
-							<Parallax speed={0}>
-								<div className="absolute sm:top-20 top-28 left-3 sm:w-[378px] sm:h-[323px] w-[254px] h-[217px]">
-									<ImagePlaceHolder
-										src="/images/astro.png"
-										alt="Spaceman flating"
-										width="100%"
-										height="100%"
-									/>
-								</div>
-							</Parallax>
+							<div className="absolute sm:top-20 top-28 left-3 sm:w-[378px] sm:h-[323px] w-[254px] h-[217px]">
+								<ImagePlaceHolder
+									src="/images/astro.png"
+									alt="Spaceman flating"
+									width="100%"
+									height="100%"
+								/>
+							</div>
 							<div className="absolute right-0 sm:top-20 top-20 sm:w-[26px] sm:h-[26px] w-[16px] h-[16px]">
 								<ImagePlaceHolder
 									src="/images/planet_small_1.svg"
