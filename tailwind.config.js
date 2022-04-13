@@ -1,11 +1,15 @@
 /* eslint-disable global-require */
+const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: false,
+  mode: 'jit',
   theme: {
     fontFamily: {
       sans: ['Roboto', 'sans-serif'],
       mono: ['Roboto Mono', 'monospace'],
+      second: ['IBM Plex Mono'],
+      round: ['IBM Plex Sans'],
     },
     fontSize: {
       xs: '0.75rem',
@@ -18,23 +22,37 @@ module.exports = {
       '4xl': '2.25rem',
       '5xl': '3rem',
       '6xl': '4rem',
+      '7xl': '5rem',
+      '8xl': '6rem',
+      '9xl': '7rem',
+      '10xl': '8rem',
     },
     colors: {
       primary: {
-        default: '#D46999',
-        hover: '#FFCDCD',
+        green: '#70ED9D',
+        pink: '#D46999',
+      },
+      secondary: {
+        green: '#66B8BE',
+        purple: '#1B0D44',
+      },
+      hover: {
+        green: '#3F9F77',
       },
       white: {
         default: '#fff',
       },
-      base: {
-        default: '#66B8BE',
-      },
       background: {
-        default: '#18181A',
+        default: '#150533',
       },
       black: {
         default: '#18181A',
+      },
+      text: {
+        dark: '#020034',
+        light: '#FFFFFF',
+        subtitleGreen: '#66B8BE',
+        subtitlePurple: '#6B3DA1',
       },
     },
     extend: {
@@ -49,6 +67,10 @@ module.exports = {
         'hero-sm': '65% 0',
         'hero-md': '65% 0',
         'hero-lg': '0 90%',
+      },
+      padding: {
+        '1/3': '33.33333%',
+        '2/3': '66.66667%',
       },
     },
   },
