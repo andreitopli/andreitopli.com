@@ -72,6 +72,22 @@ module.exports = {
         '1/3': '33.33333%',
         '2/3': '66.66667%',
       },
+      keyframes: {
+        spaceman: {
+          '0%': {
+            transform: 'translateY(0px)',
+          },
+          '50%': {
+            transform: 'translateY(10px)',
+          },
+          '100%': {
+            transform: 'translateY(0px)',
+          },
+        },
+      },
+      animation: {
+        'spaceman-float': 'spaceman 4s ease-in-out infinite',
+      },
     },
   },
   variants: {

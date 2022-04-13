@@ -59,7 +59,7 @@ export const Hero = () => (
 								height="100%"
 							/>
 						</div>
-						<div className="absolute sm:top-20 top-28 left-3 sm:w-[378px] sm:h-[323px] w-[254px] h-[217px]">
+						<div className="absolute sm:top-20 top-28 left-3 sm:w-[378px] sm:h-[323px] w-[254px] h-[217px] animate-spaceman-float">
 							<ImagePlaceHolder
 								src="/images/astro.png"
 								alt="Spaceman flating"
@@ -91,7 +91,7 @@ export const Hero = () => (
 								height="100%"
 							/>
 						</div>
-						<div className="absolute sm:bottom-10 sm:left-52 bottom-0 right-20 sm:w-[106px] sm:h-[68px] w-[85px] h-[54px]">
+						<div className="absolute sm:bottom-5 sm:left-52 bottom-0 right-20 sm:w-[106px] sm:h-[68px] w-[85px] h-[54px]">
 							<ImagePlaceHolder
 								src="/images/planet_rings.svg"
 								alt="planet with rings"
