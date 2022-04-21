@@ -39,7 +39,7 @@ export const Hero = () => (
 						</a>
 					</div>
 				</div>
-				<div className="flex justify-start max-w-[24rem] max-h-[24rem]">
+				<div className="flex justify-start sm:max-w-[24rem] sm:max-h-[24rem] max-w-[9rem] max-h-[9rem]">
 					<ImagePlaceHolder
 						src="/images/planet_faded.svg"
 						height="100%"
@@ -52,12 +52,64 @@ export const Hero = () => (
 				<div className="right-0 top-10 sm:w-[472px] sm:h-[385px] w-[241px] h-[305px]">
 					<div className="relative w-full h-full">
 						<div className="absolute top-0 sm:left-40 right-6 sm:w-[172px] sm:h-[110px] w-[128px] h-[82px]">
-							<ImagePlaceHolder
-								src="/images/code_blocks.svg"
-								alt="code blocks"
-								width="100%"
-								height="100%"
-							/>
+							<div className="relative w-full h-full">
+								<div className="absolute sm:left-3 sm:top-0 sm:w-[45.52px] sm:h-[29.4px] w-[33.94px] h-[21.92px] left-1 top-0 z-50 animate-code-foreground-float">
+									<ImagePlaceHolder
+										src="/images/code_block_small_purple.svg"
+										alt="code block"
+										width="100%"
+										height="100%"
+									/>
+								</div>
+								<div className="absolute sm:left-12 sm:top-6 sm:w-[97.99px] sm:h-[64.92px] w-[73px] h-[48.4px] left-8 top-4 z-30 animate-code-foreground-float2">
+									<ImagePlaceHolder
+										src="/images/code_block_big.svg"
+										alt="code block"
+										width="100%"
+										height="100%"
+									/>
+								</div>
+								<div className="absolute sm:right-0 sm:top-11 sm:w-[30.62px] sm:h-[24.5px] w-[22.83px] h-[18.27px] right-1 top-8 z-50 animate-code-foreground-float">
+									<ImagePlaceHolder
+										src="/images/code_block_green.svg"
+										alt="code block"
+										width="100%"
+										height="100%"
+									/>
+								</div>
+								<div className="absolute sm:right-1 sm:bottom-3 sm:w-[41.65px] sm:h-[15.27px] w-[31.05px] h-[11.39px] right-1 bottom-3 z-40 animate-code-foreground-float2">
+									<ImagePlaceHolder
+										src="/images/code_block_lines.svg"
+										alt="code block"
+										width="100%"
+										height="100%"
+									/>
+								</div>
+								<div className="absolute sm:left-0 sm:top-12 sm:w-[26.95px] sm:h-[9.88px] w-[20.09px] h-[7.37px] left-0 top-10 z-10 animate-code-background-float">
+									<ImagePlaceHolder
+										src="/images/code_blur_1.svg"
+										alt="code block"
+										width="100%"
+										height="100%"
+									/>
+								</div>
+								<div className="absolute sm:right-1 sm:top-5 sm:w-[17.15px] sm:h-[11.28px] w-[12.79px] h-[8.41px] right-1 top-2 z-10 animate-code-background-float">
+									<ImagePlaceHolder
+										src="/images/code_blur_2.svg"
+										alt="code block"
+										width="100%"
+										height="100%"
+									/>
+								</div>
+								<div className="absolute sm:right-20 sm:bottom-0 sm:w-[22.34px] sm:h-[14.7px] w-[16.66] h-[10.96px] bottom-1 right-16 z-10 animate-code-background-float">
+									<ImagePlaceHolder
+										src="/images/code_blur_3.svg"
+										alt="code block"
+										width="100%"
+										height="100%"
+									/>
+								</div>
+							</div>
 						</div>
 						<div className="absolute sm:top-20 top-28 left-3 sm:w-[378px] sm:h-[323px] w-[254px] h-[217px] animate-spaceman-float">
 							<ImagePlaceHolder

@@ -84,9 +84,45 @@ module.exports = {
             transform: 'translateY(0px)',
           },
         },
+        codeForeground: {
+          '0%': {
+            transform: 'translateY(0px)',
+          },
+          '50%': {
+            transform: 'translateY(5px)',
+          },
+          '100%': {
+            transform: 'translateY(0px)',
+          },
+        },
+        codeForeground2: {
+          '0%': {
+            transform: 'translateY(0px)',
+          },
+          '50%': {
+            transform: 'translateY(7px)',
+          },
+          '100%': {
+            transform: 'translateY(0px)',
+          },
+        },
+        codeBackground: {
+          '0%': {
+            transform: 'translateY(0px)',
+          },
+          '50%': {
+            transform: 'translateY(3px)',
+          },
+          '100%': {
+            transform: 'translateY(0px)',
+          },
+        },
       },
       animation: {
         'spaceman-float': 'spaceman 4s ease-in-out infinite',
+        'code-foreground-float': 'codeForeground 4s ease-in-out infinite',
+        'code-background-float': 'codeBackground 5s ease-in-out infinite',
+        'code-foreground-float2': 'codeForeground2 4s ease-in-out infinite',
       },
     },
   },
