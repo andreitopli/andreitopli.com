@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from '../Button/Button';
 import { ImagePlaceHolder } from '../ImagePlaceholder/ImagePlaceholder';
+import { Spaceman } from '../Spaceman/Spaceman';
 
 export const Hero = () => (
 	<main className="flex flex-col w-full h-screen overflow-hidden bg-background-default relative">
@@ -14,7 +15,7 @@ export const Hero = () => (
 						</span>
 					</p>
 					<p className="text-text-subtitleGreen text-sm sm:text-lg font-mono font-light">
-						I’m a software enginner and co-founder of Chessroulette
+						I’m a software engineer and co-founder of Chessroulette
 					</p>
 				</div>
 				<div className="sm:block hidden space-y-2 px-16">
@@ -111,13 +112,16 @@ export const Hero = () => (
 								</div>
 							</div>
 						</div>
-						<div className="absolute sm:top-20 top-28 left-3 sm:w-[378px] sm:h-[323px] w-[254px] h-[217px] animate-spaceman-float">
+						{/*	<div className="absolute sm:top-20 top-28 left-3 sm:w-[378px] sm:h-[323px] w-[254px] h-[217px] animate-spaceman-float">
 							<ImagePlaceHolder
 								src="/images/astro.png"
 								alt="Spaceman flating"
 								width="100%"
 								height="100%"
 							/>
+						</div>*/}
+						<div className="absolute sm:top-20 top-28 left-3 animate-spaceman-float">
+							<Spaceman />
 						</div>
 						<div className="absolute right-0 sm:top-20 top-20 sm:w-[26px] sm:h-[26px] w-[16px] h-[16px]">
 							<ImagePlaceHolder
@@ -127,7 +131,7 @@ export const Hero = () => (
 								height="100%"
 							/>
 						</div>
-						<div className="absolute sm:bottom-24 sm:right-3 right-2 bottom-20 sm:w-[142px] sm:h-[142px] w-[69px] h-[69px]">
+						<div className="absolute sm:bottom-24 sm:right-3 right-2 bottom-24 sm:w-[142px] sm:h-[142px] w-[69px] h-[69px]">
 							<ImagePlaceHolder
 								src="/images/planet_big_green.svg"
 								width="100%"
