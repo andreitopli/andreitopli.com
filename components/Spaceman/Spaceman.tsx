@@ -53,8 +53,8 @@ export const Spaceman: React.FC<Props> = ({}) => {
 							gradientUnits="userSpaceOnUse"
 						>
 							<stop stopColor="#29B3FE" />
-							<stop offset="0.459671" stopColor="#29B3FE" stop-opacity="0.22" />
-							<stop offset="1" stopColor="#29B3FE" stop-opacity="0" />
+							<stop offset="0.459671" stopColor="#29B3FE" stopOpacity="0.22" />
+							<stop offset="1" stopColor="#29B3FE" stopOpacity="0" />
 						</linearGradient>
 					</defs>
 				</svg>

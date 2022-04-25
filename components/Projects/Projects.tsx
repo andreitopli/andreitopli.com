@@ -15,7 +15,7 @@ const GetAllProjects = gql`
 
 type Props = {};
 
-export const Projects: React.FC<Props> = (props) => {
+export const Projects: React.FC<Props> = ({}) => {
 	const { data } = useQuery(GetAllProjects);
 
 	useEffect(() => {

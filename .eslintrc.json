@@ -1,0 +1,13 @@
+{
+  "plugins": ["@typescript-eslint"],
+  "extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "no-var": "off",
+    "@typescript-eslint/ban-types": "off",
+    "@next/next/no-img-element": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@next/next/no-page-custom-font": "off"
+  }
+}
