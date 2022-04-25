@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write"
+    "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
+    "netlify-build": "prisma:generate && next build",
+    "prisma:generate": "PRISMA_CLIENT_ENGINE_TYPE=\"dataproxy\" prisma generate"
   },
   "prisma": {
     "schema": "prisma/schema.prisma"
@@ -28,6 +30,8 @@
     "react-spring": "^9.4.4"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.17.0",
+    "@next/eslint-plugin-next": "^12.1.5",
     "@tailwindcss/line-clamp": "^0.2.2",
     "@types/micro-cors": "^0.1.2",
     "@types/react": "17.0.27",
