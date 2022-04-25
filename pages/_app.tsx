@@ -3,6 +3,8 @@ import type { AppProps } from 'next/app';
 import 'tailwindcss/tailwind.css';
 import Head from 'next/head';
 import { ParallaxProvider } from 'react-scroll-parallax';
+import { ApolloProvider } from '@apollo/client';
+import apollo from '../lib/apollo';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -24,9 +26,11 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           rel="stylesheet"
         />
       </Head>
-      <ParallaxProvider>
-        <Component {...pageProps} />
-      </ParallaxProvider>
+      <ApolloProvider client={apollo}>
+        <ParallaxProvider>
+          <Component {...pageProps} />
+        </ParallaxProvider>
+      </ApolloProvider>
     </>
   );
 }
