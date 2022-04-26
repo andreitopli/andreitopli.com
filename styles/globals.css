@@ -5,6 +5,11 @@
 html,
 body {
   font-family: 'Roboto Mono';
+  background-color: #150533;
+}
+
+root {
+  background: #150533;
 }
 
 @responsive {

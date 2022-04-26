@@ -5,7 +5,7 @@ import { ImagePlaceHolder } from '../ImagePlaceholder/ImagePlaceholder';
 import { Spaceman } from '../Spaceman/Spaceman';
 
 export const Hero = () => (
-	<main className="flex flex-col w-full h-screen overflow-hidden bg-background-default relative">
+	<main className="flex flex-col w-full overflow-hidden relative">
 		<div className="flex flex-row w-full">
 			<div className="max-w-[60vw] sm:max-w-fit flex flex-col z-50">
 				<div className="p-0 pl-6 pt-6 sm:p-16">
@@ -40,16 +40,8 @@ export const Hero = () => (
 						</a>
 					</div>
 				</div>
-				<div className="flex justify-start sm:max-w-[24rem] sm:max-h-[24rem] max-w-[9rem] max-h-[9rem]">
-					<ImagePlaceHolder
-						src="/images/planet_faded.svg"
-						height="100%"
-						width="100%"
-						alt="background planet"
-					/>
-				</div>
 			</div>
-			<div className="absolute right-0 sm:relative sm:flex-1 sm:pt-10 pt-8 mr-2">
+			<div className="absolute right-0 sm:relative sm:flex-1 sm:pt-10 pt-8 mr-2 z-50">
 				<div className="right-0 top-10 sm:w-[472px] sm:h-[385px] w-[241px] h-[305px]">
 					<div className="relative w-full h-full">
 						<div className="absolute top-0 sm:left-40 right-6 sm:w-[172px] sm:h-[110px] w-[128px] h-[82px]">

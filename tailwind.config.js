@@ -44,6 +44,7 @@ module.exports = {
       },
       background: {
         default: '#150533',
+        card: '#1B0D44',
       },
       black: {
         default: '#18181A',
@@ -71,6 +72,10 @@ module.exports = {
       padding: {
         '1/3': '33.33333%',
         '2/3': '66.66667%',
+      },
+      backgroundImage: {
+        'colored-border':
+          'linear-gradient(94.36deg, #A60CDA 62.5%, #9EDBFE 99.66%)',
       },
       keyframes: {
         spaceman: {
