@@ -11,7 +11,7 @@ const Home: NextPage = () => (
       <meta name="description" content="Andrei Topli portfolio" />
       {/* <link rel="icon" href="/favicon.ico" /> */}
     </Head>
-    <div className="absolute top-[14rem] sm:top-[20rem] -left-20 flex justify-start sm:max-w-[24rem] sm:max-h-[24rem] max-w-[9rem] max-h-[9rem] z-0">
+    <div className="absolute top-[14rem] sm:top-[20rem] -left-20 flex justify-start sm:max-w-[24rem] sm:max-h-[24rem] max-w-[9rem] max-h-[9rem] z-0 pointer-events-none">
       <ImagePlaceHolder
         src="/images/planet_faded.svg"
         height="100%"

@@ -9,3 +9,7 @@ export const isDangerouslySetHtml = (
   t: unknown,
 ): t is DangerouslySetInnerHTML =>
   typeof t === 'object' && hasOwnProperty(t || {}, '__html');
+
+export const randomRange = (start: number, end: number): number => {
+  return Math.round(Math.random() * (end - start) + start);
+};

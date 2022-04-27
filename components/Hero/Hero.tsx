@@ -5,7 +5,7 @@ import { ImagePlaceHolder } from '../ImagePlaceholder/ImagePlaceholder';
 import { Spaceman } from '../Spaceman/Spaceman';
 
 export const Hero = () => (
-	<main className="flex flex-col w-full overflow-hidden relative">
+	<main className="flex flex-col w-full overflow-visible sm:overflow-hidden relative">
 		<div className="flex flex-row w-full">
 			<div className="max-w-[60vw] sm:max-w-fit flex flex-col z-50">
 				<div className="p-0 pl-6 pt-6 sm:p-16">
@@ -15,7 +15,8 @@ export const Hero = () => (
 						</span>
 					</p>
 					<p className="text-text-subtitleGreen text-sm sm:text-lg font-mono font-light">
-						I’m a software engineer and co-founder of Chessroulette
+						I’m a software engineer, space cowboy and co-founder of
+						Chessroulette
 					</p>
 				</div>
 				<div className="sm:block hidden space-y-2 px-16">

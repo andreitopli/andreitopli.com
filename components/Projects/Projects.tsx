@@ -22,22 +22,32 @@ export const Projects: React.FC<Props> = ({}) => {
 		useQuery<{ projects: Project[] }>(GetAllProjects);
 
 	if (loading) {
-		console.log('loading query');
+		return (
+			<div className="relative w-full h-full flex flex-col gap-5 text-white-default text-sm font-mono pl-6 sm:pl-16 pr-6 sm:pr-16 sm:max-w-[800px] z-50 mt-20 sm:mt-0">
+				<div className="font-medium font-mono">Current projects:</div>
+				<div
+					style={{
+						borderTopColor: 'transparent',
+					}}
+					className="w-8 h-8 border-4 border-primary-pink border-solid rounded-full animate-spin"
+				></div>
+			</div>
+		);
 	}
 
 	if (error) {
-		console.log('error loading query', error);
+		return <div></div>;
 	}
 
 	if (!data) {
-		return <div>No data!</div>;
+		return <div></div>;
 	}
 
 	const { projects } = data;
 
 	return (
-		<div className="w-full h-full flex flex-col gap-3 text-white-default text-sm font-mono font-light pl-6 sm:pl-16 sm:max-w-[800px]">
-			<div>Currently working on :</div>
+		<div className="relative w-full h-full flex flex-col gap-5 text-white-default text-sm font-mono pl-6 sm:pl-16 pr-6 sm:pr-16 sm:max-w-[800px] z-50 mt-20 sm:mt-0">
+			<div className="font-medium font-mono">Current projects:</div>
 			<div>
 				{projects.map((project) => (
 					<ProjectCard project={project} key={project.id} />
