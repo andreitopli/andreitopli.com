@@ -1,7 +1,7 @@
 import { Project } from '.prisma/client';
 import { useQuery } from '@apollo/client';
 import { gql } from 'apollo-server-core';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { ProjectCard } from '../ProjectCard/ProjectCard';
 
 const GetAllProjects = gql`

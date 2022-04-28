@@ -1,5 +1,4 @@
 import { Project } from '.prisma/client';
-import { DangerouslySetInnerHTML, randomRange } from '@/../utils/utils';
 import React from 'react';
 import { ImagePlaceHolder } from '../ImagePlaceholder/ImagePlaceholder';
 
