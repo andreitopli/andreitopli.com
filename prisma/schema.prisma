@@ -1,5 +1,5 @@
 generator client {
-  provider        = "prisma-client-js"
+  provider = "prisma-client-js"
   previewFeatures = ["dataProxy"]
 }
 
@@ -9,9 +9,9 @@ datasource db {
 }
 
 model Project {
-  title       String  @unique
+  title       String @unique
   description String
   featured    String
-  id          Int     @id @default(autoincrement())
-  url         String?
+  id          Int    @id @default(autoincrement())
+  url         String
 }

@@ -11,6 +11,7 @@ const GetAllProjects = gql`
 			title
 			description
 			featured
+			url
 		}
 	}
 `;
@@ -23,7 +24,7 @@ export const Projects: React.FC<Props> = ({}) => {
 
 	if (loading) {
 		return (
-			<div className="relative w-full h-full flex flex-col gap-5 text-white-default text-sm font-mono pl-6 sm:pl-16 pr-6 sm:pr-16 sm:max-w-[800px] z-50 mt-20 sm:mt-0">
+			<div className="relative w-full flex flex-col gap-5 text-white-default text-sm font-mono pl-6 sm:pl-16 pr-6 sm:pr-16 sm:max-w-[800px] z-50 mt-20 sm:mt-0">
 				<div className="font-medium font-mono">Current projects:</div>
 				<div
 					style={{
@@ -46,12 +47,21 @@ export const Projects: React.FC<Props> = ({}) => {
 	const { projects } = data;
 
 	return (
-		<div className="relative w-full h-full flex flex-col gap-5 text-white-default text-sm font-mono pl-6 sm:pl-16 pr-6 sm:pr-16 sm:max-w-[800px] z-50 mt-20 sm:mt-0">
+		<div className="relative w-full flex flex-col gap-5 text-white-default text-sm font-mono pl-6 sm:pl-16 pr-6 sm:pr-16 sm:max-w-[800px] z-50 mt-10 sm:mt-0">
 			<div className="font-medium font-mono">Current projects:</div>
 			<div>
-				{projects.map((project) => (
-					<ProjectCard project={project} key={project.id} />
-				))}
+				{[...projects]
+					.sort((a, b) => a.id - b.id)
+					.map((project) => (
+						<a
+							href={project.url}
+							target="_blank"
+							rel="noreferrer"
+							key={project.id}
+						>
+							<ProjectCard project={project} />
+						</a>
+					))}
 			</div>
 		</div>
 	);

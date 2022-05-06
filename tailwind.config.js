@@ -89,6 +89,14 @@ module.exports = {
             transform: 'translateY(0px)',
           },
         },
+        blocksZoom: {
+          '0%': {
+            transform: 'scale(100%)',
+          },
+          '100%': {
+            transform: 'scale(105%)',
+          },
+        },
         codeForeground: {
           '0%': {
             transform: 'translateY(0px)',

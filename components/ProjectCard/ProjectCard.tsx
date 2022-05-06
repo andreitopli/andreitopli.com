@@ -11,7 +11,7 @@ const colors = ['#D46999', '#EE58EC', '#70ED9D'];
 export const ProjectCard: React.FC<Props> = ({ project }) => {
 	return (
 		<>
-			<div className="text-white-default bg-colored-border rounded-lg p-[1px] mb-10 hover:scale-105 hover:cursor-pointer">
+			<div className="text-white-default bg-colored-border rounded-lg p-[1px] mb-10 hover:scale-105 transform transition duration-500 hover:cursor-pointer">
 				<div className="relative rounded-lg bg-background-card flex flex-col p-5">
 					<div className="font-mono text-xs text-white-default mb-10">
 						<span dangerouslySetInnerHTML={{ __html: project.description }} />

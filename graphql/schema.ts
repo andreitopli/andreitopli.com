@@ -6,6 +6,7 @@ export const typeDefs = gql`
 		title: String
 		description: String
 		featured: String
+		url: String
 	}
 
 	type Query {
