@@ -8,9 +8,9 @@ datasource db {
 }
 
 model Project {
-  title       String @unique
+  title       String
   description String
   featured    String
-  id          Int    @id @default(autoincrement())
+  id          Int    @id(map: "portfolio_pkey") @unique(map: "portfolio_id_key") @default(autoincrement())
   url         String
 }
