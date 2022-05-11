@@ -12,6 +12,7 @@ module.exports = {
       round: ['IBM Plex Sans'],
     },
     fontSize: {
+      xxs: '0.55rem',
       xs: '0.75rem',
       sm: '0.875rem',
       base: '1rem',
@@ -130,12 +131,26 @@ module.exports = {
             transform: 'translateY(0px)',
           },
         },
+        meteor1: {
+          '0%': {
+            transform: 'translateY(0) translateX(0)',
+            opacity: 1,
+          },
+          '70%': {
+            opacity: 1,
+          },
+          '100%': {
+            transform: 'translateY(1000%) translateX(-1000%)',
+            opacity: 0,
+          },
+        },
       },
       animation: {
         'spaceman-float': 'spaceman 4s ease-in-out infinite',
         'code-foreground-float': 'codeForeground 4s ease-in-out infinite',
         'code-background-float': 'codeBackground 5s ease-in-out infinite',
         'code-foreground-float2': 'codeForeground2 4s ease-in-out infinite',
+        'meteor-1': 'meteor1 1.5s linear infinite',
       },
     },
   },

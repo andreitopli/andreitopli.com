@@ -2,6 +2,7 @@ import { Project } from '.prisma/client';
 import { useQuery } from '@apollo/client';
 import { gql } from 'apollo-server-core';
 import React from 'react';
+import { ImagePlaceHolder } from '../ImagePlaceholder/ImagePlaceholder';
 import { ProjectCard } from '../ProjectCard/ProjectCard';
 
 const GetAllProjects = gql`
@@ -47,8 +48,18 @@ export const Projects: React.FC<Props> = ({}) => {
 	const { projects } = data;
 
 	return (
-		<div className="relative w-full flex flex-col gap-5 text-white-default text-sm font-mono pl-6 sm:pl-16 pr-6 sm:pr-16 sm:max-w-[800px] z-50 mt-10 sm:mt-0">
-			<div className="font-medium font-mono">Current projects:</div>
+		<div className="relative w-full flex flex-col gap-5 text-white-default text-sm font-mono pl-6 sm:pl-16 pr-6 sm:pr-16 sm:max-w-[800px] z-50 mt-20 sm:mt-0">
+			{/*	<div className="absolute z-0 -right-10 top-1/2">
+				<ImagePlaceHolder
+					src="/images/planet_rings_purple.svg"
+					alt="orange planet"
+					width="100%"
+					height="100%"
+				/>
+			</div>*/}
+			<div className="font-medium font-mono sm:mb-0 mb-4">
+				Currently in development:
+			</div>
 			<div>
 				{[...projects]
 					.sort((a, b) => a.id - b.id)

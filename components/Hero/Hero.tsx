@@ -17,7 +17,7 @@ export const Hero = () => {
 						</p>
 						<p className="text-text-subtitleGreen text-sm sm:text-lg font-mono font-light">
 							I’m a software engineer, space cowboy and co-founder of
-							Chessroulette
+							Chessroulette.
 						</p>
 					</div>
 					<div className="sm:block hidden space-y-2 px-16">
@@ -30,13 +30,13 @@ export const Hero = () => {
 						</a>
 					</div>
 					<div className="flex justify-start sm:hidden w-full pl-6">
-						<div className="bg-primary-green rounded-full text-center align-baseline px-8 py-1 mt-10">
+						<div className="bg-primary-green rounded-full text-center align-baseline sm:px-8 px-7 py-1 sm:mt-10 mt-12">
 							<a
 								href="mailto:andrei.topli@gmail.com"
 								target="_blank"
 								rel="noreferrer"
 							>
-								<span className="text-text-dark font-semibold font-second text-lg">
+								<span className="text-text-dark font-semibold font-second sm:text-lg text-base">
 									Say Hi
 								</span>
 							</a>
@@ -51,7 +51,7 @@ export const Hero = () => {
 								style={{ zIndex: 30 }}
 								className="sm:block hidden"
 							>*/}
-							<div className="absolute top-0 sm:left-40 right-6 sm:w-[172px] sm:h-[110px] w-[128px] h-[82px]">
+							<div className="absolute top-0 sm:left-32 right-6 sm:w-[172px] sm:h-[110px] w-[128px] h-[82px]">
 								<div className="relative w-full h-full">
 									<div className="absolute sm:left-3 sm:top-0 sm:w-[45.52px] sm:h-[29.4px] w-[33.94px] h-[21.92px] left-1 top-0 z-50 animate-code-foreground-float">
 										<ImagePlaceHolder
@@ -126,33 +126,33 @@ export const Hero = () => {
 								style={{ zIndex: 40 }}
 								className="sm:block hidden"
 							>*/}
-							<div className="absolute sm:top-20 top-28 left-3 animate-spaceman-float">
+							<div className="absolute sm:top-24 top-28 sm:-left-10 left-5 animate-spaceman-float">
 								<Spaceman />
 							</div>
 							{/*</ParallaxLayer>*/}
-							<div className="absolute right-0 sm:top-20 top-20 sm:w-[26px] sm:h-[26px] w-[16px] h-[16px] z-10">
+							<div className="absolute right-10 sm:top-20 top-20 sm:w-[19px] sm:h-[19px] w-[16px] h-[16px] z-10">
 								<ImagePlaceHolder
-									src="/images/planet_small_1.svg"
+									src="/images/planet_small_green.svg"
 									alt="small planet"
 									width="100%"
 									height="100%"
 								/>
 							</div>
-							<div className="absolute sm:bottom-24 sm:right-3 right-2 bottom-24 sm:w-[142px] sm:h-[142px] w-[69px] h-[69px] z-10">
+							<div className="absolute sm:bottom-24 sm:right-3 right-2 bottom-24 sm:w-[205px] sm:h-[142px] w-[69px] h-[69px] z-10">
 								{/*	<ParallaxLayer
 									offset={0.01}
 									speed={0.1}
 									className="sm:block hidden"
 								>*/}
 								<ImagePlaceHolder
-									src="/images/planet_big_green.svg"
+									src="/images/giant_planet_rings.svg"
 									width="100%"
 									height="100%"
 									alt="green planet"
 								/>
 								{/*</ParallaxLayer>*/}
 							</div>
-							<div className="absolute sm:bottom-0 bottom-5 right-10 sm:right-28 sm:w-[19px] sm:h-[19px] w-[15px] h-[15px] z-10">
+							<div className="absolute sm:-bottom-10 bottom-5 right-10 sm:right-28 sm:w-[19px] sm:h-[19px] w-[15px] h-[15px] z-10">
 								<ImagePlaceHolder
 									src="/images/planet_small_orange.svg"
 									alt="orange planet"
@@ -160,7 +160,7 @@ export const Hero = () => {
 									height="100%"
 								/>
 							</div>
-							<div className="absolute sm:bottom-1 sm:left-52 bottom-0 right-20 sm:w-[106px] sm:h-[68px] w-[85px] h-[54px] z-10">
+							<div className="absolute sm:-bottom-30 sm:left-40 bottom-0 right-20 sm:w-[106px] sm:h-[68px] w-[85px] h-[54px] z-10">
 								{/*<ParallaxLayer
 									offset={0.01}
 									speed={-0.2}

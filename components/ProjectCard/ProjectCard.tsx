@@ -16,13 +16,13 @@ export const ProjectCard: React.FC<Props> = ({ project }) => {
 					<div className="font-mono text-xs text-white-default mb-10">
 						<span dangerouslySetInnerHTML={{ __html: project.description }} />
 					</div>
-					<div className="font-mono text-lg font-semibold">
+					<div className="font-mono sm:text-lg text-base font-semibold sm:mb-0 mb-4">
 						{`${project.title.slice(0, 1).toUpperCase()}${project.title.slice(
 							1,
 						)}`}
 					</div>
 					<div
-						className="absolute -bottom-3 left-5 rounded-full text-text-dark text-xs font-mono font-medium pt-1 pb-1 pl-3 pr-3"
+						className="absolute -bottom-3 left-5 rounded-full text-text-dark sm:text-xs text-xxs font-mono font-medium pt-1 pb-1 pl-3 pr-3"
 						style={{
 							backgroundColor: colors[project.id],
 						}}
@@ -31,7 +31,7 @@ export const ProjectCard: React.FC<Props> = ({ project }) => {
 					</div>
 				</div>
 			</div>
-			<div className="absolute top-16 right-2 sm:right-10 w-[54px] h-[34.88px] animate-code-foreground-float">
+			<div className="absolute top-16 right-2 sm:right-10 sm:w-[54px] sm:h-[34.88px] w-[40px] h-[20.88px] animate-code-foreground-float">
 				<ImagePlaceHolder
 					src="/images/code_block_small_purple.svg"
 					width="100%"
