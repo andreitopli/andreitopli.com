@@ -47,7 +47,7 @@ const Home: NextPage = () => {
         id="meteor"
         style={{
           right: randomRange(-width / 2, width / 2),
-          top: randomRange(-100, 0),
+          top: randomRange(-200, -100),
         }}
       >
         <ImagePlaceHolder
