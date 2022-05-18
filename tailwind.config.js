@@ -150,7 +150,7 @@ module.exports = {
         'code-foreground-float': 'codeForeground 4s ease-in-out infinite',
         'code-background-float': 'codeBackground 5s ease-in-out infinite',
         'code-foreground-float2': 'codeForeground2 4s ease-in-out infinite',
-        'meteor-1': 'meteor1 1.5s linear infinite',
+        'meteor-1': 'meteor1 1.6s linear infinite',
       },
     },
   },

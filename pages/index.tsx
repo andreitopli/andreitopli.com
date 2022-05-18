@@ -14,7 +14,6 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     const meteorDiv = document.getElementById('meteor');
-    console.log('check meteor', meteorDiv);
 
     if (!meteorDiv) {
       const timeout = setTimeout(() => {
@@ -47,7 +46,7 @@ const Home: NextPage = () => {
         id="meteor"
         style={{
           right: randomRange(-width / 2, width / 2),
-          top: randomRange(-200, -100),
+          top: -200,
         }}
       >
         <ImagePlaceHolder
