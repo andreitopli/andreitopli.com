@@ -7,9 +7,6 @@ export type ContainerDimensions = {
   updated: boolean;
 };
 
-/**
- * Hook that alerts clicks outside of the passed ref
- */
 export function useContainerDimensions(
   targetRef: React.RefObject<HTMLElement>,
 ) {

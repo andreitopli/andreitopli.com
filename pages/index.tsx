@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { Hero } from '../components/Hero/Hero';
 import { ImagePlaceHolder } from '../components/ImagePlaceholder/ImagePlaceholder';
 import { Projects } from '../components/Projects/Projects';
+import { useMousePosition } from '../hooks/useMousePosition';
 import { useWindowSize } from '../hooks/useWindowSize';
 import { randomRange } from '../utils/utils';
 
@@ -11,6 +12,7 @@ const Home: NextPage = () => {
   const [currentMeteor, setCurrentMeteor] = useState<React.ReactNode>(null);
   const windowSize = useWindowSize();
   const [meteor, setMeteor] = useState<React.ReactNode>(null);
+  const mouse = useMousePosition([windowSize.height, windowSize.width]);
 
   useEffect(() => {
     const meteorDiv = document.getElementById('meteor');
@@ -75,7 +77,13 @@ const Home: NextPage = () => {
         >
           {meteor}
         </div>
-        <div className="absolute bottom-0 sm:top-[10rem] -left-20 flex justify-start sm:max-w-[24rem] sm:max-h-[24rem] max-w-[15rem] max-h-[15rem] z-0 pointer-events-none">
+        <div
+          className="absolute bottom-0 sm:top-[10rem] -left-20 flex justify-start sm:max-w-[24rem] sm:max-h-[24rem] max-w-[15rem] max-h-[15rem] z-0 pointer-events-none"
+          style={{
+            transform: `translate(-${mouse.x / 1000}%, -${mouse.y / 1000}%)`,
+            transition: 'all ease-in-out',
+          }}
+        >
           <ImagePlaceHolder
             src="/images/planet_faded.svg"
             height="100%"

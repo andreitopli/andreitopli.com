@@ -1,13 +1,22 @@
 /* eslint-disable react/jsx-indent, no-tabs, react/jsx-indent-props, react/self-closing-comp, @typescript-eslint/no-empty-function, max-len */
-import React from 'react';
+import { useContainerDimensions } from '@/../hooks/useContainerDimensions';
+import { useMousePosition } from '@/../hooks/useMousePosition';
+import React, { useEffect, useRef } from 'react';
 import { Button } from '../Button/Button';
 import { ImagePlaceHolder } from '../ImagePlaceholder/ImagePlaceholder';
 import { Spaceman } from '../Spaceman/Spaceman';
 
 export const Hero = () => {
+	const containerRef = useRef<HTMLDivElement | null>(null);
+	const containerDimensions = useContainerDimensions(containerRef);
+	const mouse = useMousePosition([
+		containerDimensions.width,
+		containerDimensions.height,
+	]);
+
 	return (
 		<main className="flex flex-col w-full overflow-visible relative">
-			<div className="flex flex-row w-full">
+			<div className="flex flex-row w-full" ref={containerRef}>
 				<div className="max-w-[60vw] sm:max-w-fit flex flex-col z-50 sm:mb-24">
 					<div className="p-0 pl-6 pt-6 sm:p-16">
 						<p className="pb-3 sm:pb-0 text-base-default text-xl sm:text-3xl font-second">
@@ -126,7 +135,9 @@ export const Hero = () => {
 								style={{ zIndex: 40 }}
 								className="sm:block hidden"
 							>*/}
-							<div className="absolute sm:top-24 top-28 sm:-left-10 left-5 animate-spaceman-float">
+							<div
+								className={`absolute sm:top-24 top-28 sm:-left-10 left-5 animate-spaceman-float`}
+							>
 								<Spaceman />
 							</div>
 							{/*</ParallaxLayer>*/}
@@ -138,7 +149,13 @@ export const Hero = () => {
 									height="100%"
 								/>
 							</div>
-							<div className="absolute sm:bottom-24 sm:right-3 right-2 bottom-24 sm:w-[205px] sm:h-[142px] w-[69px] h-[69px] z-10">
+							<div
+								className="absolute sm:bottom-24 sm:right-3 right-2 bottom-24 sm:w-[205px] sm:h-[142px] w-[69px] h-[69px] z-10"
+								style={{
+									transform: `translate(${mouse.x / 300}%, ${mouse.y / 300}%)`,
+									transition: 'all ease-in-out',
+								}}
+							>
 								{/*	<ParallaxLayer
 									offset={0.01}
 									speed={0.1}
@@ -160,7 +177,15 @@ export const Hero = () => {
 									height="100%"
 								/>
 							</div>
-							<div className="absolute sm:-bottom-30 sm:left-40 bottom-0 right-20 sm:w-[106px] sm:h-[68px] w-[85px] h-[54px] z-10">
+							<div
+								className="absolute sm:-bottom-30 sm:left-40 bottom-0 right-20 sm:w-[106px] sm:h-[68px] w-[85px] h-[54px] z-10"
+								style={{
+									transform: `translate(-${mouse.x / 150}%, -${
+										mouse.y / 150
+									}%)`,
+									transition: 'all ease-in-out',
+								}}
+							>
 								{/*<ParallaxLayer
 									offset={0.01}
 									speed={-0.2}
